@@ -73,7 +73,7 @@ function processRecord(record, callback) {
             var s3 = createS3(regionName);
             s3.copyObject({
                 Bucket: targetBucket,
-                Key: targetKey,
+                Key: 'res/common/image/iron/' + targetKey,
                 ACL: 'bucket-owner-full-control',
                 CopySource: encodeURIComponent(srcBucket + '/' + srcKey),
                 MetadataDirective: 'COPY'
